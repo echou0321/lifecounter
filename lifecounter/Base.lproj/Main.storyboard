@@ -1,24 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lifecounter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZYU-PN-ofU">
+                                <rect key="frame" x="16" y="134" width="361" height="648"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mui-gR-M7b">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="316"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="j6m-Cg-MFd">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="316"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOO-p4-KGg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="65.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ5-0p-Sxw">
+                                                        <rect key="frame" x="0.0" y="81.666666666666657" width="361" height="67"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="56"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jmg-Jt-VHN">
+                                                        <rect key="frame" x="0.0" y="164.66666666666669" width="361" height="101"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fs4-fz-B4k">
+                                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="101"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                                <connections>
+                                                                    <action selector="player1PlusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXP-xI-Eh5"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKQ-TL-QmH">
+                                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="101"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                                                <connections>
+                                                                    <action selector="player1MinusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ve7-KW-2kK"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ggF-fU-YRt">
+                                                        <rect key="frame" x="0.0" y="281.66666666666669" width="361" height="34.333333333333314"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anX-gg-1TO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34.333333333333336"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="+5"/>
+                                                                <connections>
+                                                                    <action selector="player1Plus5Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kOK-rR-xDn"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5E-hm-Th1">
+                                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="34.333333333333336"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="-5"/>
+                                                                <connections>
+                                                                    <action selector="player1Minus5Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bD1-w8-iKj"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="j6m-Cg-MFd" secondAttribute="bottom" id="2tZ-7q-mBD"/>
+                                            <constraint firstAttribute="trailing" secondItem="j6m-Cg-MFd" secondAttribute="trailing" id="NJQ-wG-i1s"/>
+                                            <constraint firstItem="j6m-Cg-MFd" firstAttribute="leading" secondItem="Mui-gR-M7b" secondAttribute="leading" id="byM-OB-IW9"/>
+                                            <constraint firstItem="j6m-Cg-MFd" firstAttribute="top" secondItem="Mui-gR-M7b" secondAttribute="top" id="hZn-3T-X7Z"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhM-AQ-dyY">
+                                        <rect key="frame" x="0.0" y="332" width="361" height="316"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-ax-Odg">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="316"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-X2-Ikx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="65.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XW-8M-8UV">
+                                                        <rect key="frame" x="0.0" y="81.666666666666629" width="361" height="67"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="56"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="acj-D4-6mU">
+                                                        <rect key="frame" x="0.0" y="164.66666666666663" width="361" height="101"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSl-A3-Yet">
+                                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="101"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                                <connections>
+                                                                    <action selector="player2PlusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1VL-Di-ZnJ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBz-dH-7ab">
+                                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="101"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                                                <connections>
+                                                                    <action selector="player2MinusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="St8-WR-fZA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nmh-K4-RLm">
+                                                        <rect key="frame" x="0.0" y="281.66666666666663" width="361" height="34.333333333333314"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEt-iG-sM5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34.333333333333336"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="+5"/>
+                                                                <connections>
+                                                                    <action selector="player2Plus5Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98P-5R-ELB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rN-v0-bMj">
+                                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="34.333333333333336"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="-5"/>
+                                                                <connections>
+                                                                    <action selector="player2Minus5Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQu-Cb-VE3"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="bYa-ax-Odg" secondAttribute="bottom" id="26w-wY-k1e"/>
+                                            <constraint firstItem="bYa-ax-Odg" firstAttribute="leading" secondItem="JhM-AQ-dyY" secondAttribute="leading" id="Xbw-3q-Wl2"/>
+                                            <constraint firstAttribute="trailing" secondItem="bYa-ax-Odg" secondAttribute="trailing" id="gpe-ic-zfU"/>
+                                            <constraint firstItem="bYa-ax-Odg" firstAttribute="top" secondItem="JhM-AQ-dyY" secondAttribute="top" id="kJX-fQ-8iS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                                <variation key="widthClass=regular" axis="horizontal"/>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYER X LOSES!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx3-7Q-HaC">
+                                <rect key="frame" x="96.666666666666671" y="807.33333333333337" width="199.66666666666663" height="28.666666666666629"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dx3-7Q-HaC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0aS-Cb-okY"/>
+                            <constraint firstAttribute="bottom" secondItem="dx3-7Q-HaC" secondAttribute="bottom" constant="16" id="BoP-PE-TzM"/>
+                            <constraint firstItem="ZYU-PN-ofU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZgL-SC-1Fk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZYU-PN-ofU" secondAttribute="trailing" constant="16" id="bcB-mk-KVe"/>
+                            <constraint firstItem="ZYU-PN-ofU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ija-Wx-oAr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="player1LifeLabel" destination="JJ5-0p-Sxw" id="ZO5-ML-wUA"/>
+                        <outlet property="player2LifeLabel" destination="8XW-8M-8UV" id="NlX-Zv-oKm"/>
+                        <outlet property="resultLabel" destination="dx3-7Q-HaC" id="VT8-zx-W1d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="121" y="96"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
